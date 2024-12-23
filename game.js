@@ -3,7 +3,6 @@ let clicks = 0;
 let lastClickTime = 0;
 let cps = 0;
 let playTime = 0;
-let
 let timerInterval;
 import { getTotalCommits } from "./revcheck.js";
 
@@ -49,8 +48,6 @@ function updateClock() {
     document.getElementById("pubrevnum").innerHTML = err;
   }
 })();
-
-
 
 function updatePlayTime() {
   playTime++;
