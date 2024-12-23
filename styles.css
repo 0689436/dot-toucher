@@ -183,7 +183,7 @@ button:hover {
   position: absolute;
   bottom: 10px; 
   font-weight: normal;
-  font-size: 4px;
+  font-size: 6px;
   text-decoration: none;
   color: var(--text-color);
 }
