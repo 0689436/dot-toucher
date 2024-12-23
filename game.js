@@ -39,8 +39,8 @@ function updateClock() {
 
 
     function revision() {
-      var number = "0";
-      document.getElementById("revnum").innerHTML = number;
+      var revcount = "1";
+      document.getElementById("pubrevnum").innerHTML = number;
     }
 
 
