@@ -40,7 +40,7 @@ function updateClock() {
 
     function revision() {
       var number = "0";
-      document.getElementById("rev").innerHTML = number;
+      document.getElementById("revision").innerHTML = number;
     }
 
 
