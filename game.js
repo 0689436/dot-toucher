@@ -3,6 +3,7 @@ let clicks = 0;
 let lastClickTime = 0;
 let cps = 0;
 let playTime = 0;
+let
 let timerInterval;
 import { getTotalCommits } from "./revcheck.js";
 
@@ -43,8 +44,8 @@ function updateClock() {
 (async () => {
   const totalCommits = await getTotalCommits();
   if (totalCommits !== null) {
-        function revision() {
-      document.getElementById("pubrevnum").innerHTML = number;
+      
+      document.getElementById("pubrevnum").innerHTML = totalCommits;
     }
 
     // Use totalCommits in your code
