@@ -4,6 +4,8 @@ let lastClickTime = 0;
 let cps = 0;
 let playTime = 0;
 let timerInterval;
+import { getTotalCommits } from "./revcheck.js";
+
 
 function incrementScore() {
   score++;
@@ -38,10 +40,19 @@ function updateClock() {
 }
 
 
-    function revision() {
+(async () => {
+  const totalCommits = await getTotalCommits();
+  if (totalCommits !== null) {
+        function revision() {
       var revcount = "1";
       document.getElementById("pubrevnum").innerHTML = number;
     }
+
+    // Use totalCommits in your code
+  } else {
+    console.error("Failed to fetch the total commits.");
+  }
+})();
 
 
 
