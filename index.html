@@ -7,11 +7,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-theme="dark">
+  <!-- Menu button -->
   <div class="menu" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
   </div>
+
+  <!-- Settings Box -->
   <div class="settings-box" id="settings-box">
     <h2>Settings</h2>
     <select class="theme-dropdown" onchange="changeTheme(this.value)">
@@ -22,16 +25,20 @@
       <option value="green">Green</option>
     </select>
   </div>
+
+  <!-- Main Content -->
   <div class="container">
     <h1 class="title">Dot Toucher</h1>
-    <button class="button" onclick="incrementScore()"></button>
+    <button class="button" onclick="incrementScore()">Click Me!</button>
     <p class="score" id="score">Score: 0</p>
     <p class="cps" id="cps">CPS: 0</p>
     <p class="play-time" id="play-time">Play Time: 00:00:00</p>
   </div>
   
+  <!-- Clock Display -->
   <div class="clock" id="clock"></div>
 
+  <!-- Footer -->
   <div class="footer">
     <p>Made by dorsalfinn79</p>
   </div>
