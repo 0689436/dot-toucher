@@ -186,6 +186,14 @@ button:hover {
   text-decoration: none;
   color: var(--text-color);
 }
+
+.pubrevnum {
+  position: absolute;
+  bottom: 10px; 
+  font-size: 0.4rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
     
 .repo {
   position: absolute;
