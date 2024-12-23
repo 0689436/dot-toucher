@@ -6,6 +6,7 @@
   <title>Dot Toucher</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+<body onload="revisionnum()">
 <body data-theme="dark">
   <!-- Menu button -->
   <div class="menu" onclick="toggleMenu()">
@@ -38,6 +39,11 @@
   <!-- Clock Display -->
   <div class="clock" id="clock"></div>
 
+  <!-- Revision Number -->
+  <div class="rev">
+    <h1>Rev <span id="revision"></span></h1>
+  </div>
+  
   <!-- Github Repo -->
   <div class="repo">
     <a href="https://github.com/0689436/dot-toucher/">Github</a>
