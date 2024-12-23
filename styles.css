@@ -185,6 +185,7 @@ button:hover {
   left: 10px;
   font-size: 0.8rem;
   color: var(--text-color);
+  text-decoration: none;
 }
 
 .footer {
