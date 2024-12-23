@@ -1,19 +1,17 @@
-/* Root Variables for Color Themes */
 :root {
-  --bg-light: #f4f4f4;
-  --text-light: #333;
-  --bg-dark: #1a1a1a;
-  --text-dark: #fff;
+  --bg-light: #ffffff;
+  --text-light: #000000;
+  --bg-dark: #121212;
+  --text-dark: #ffffff;
   --bg-red: #ff2a68; /* Saturated Red */
-  --text-red: #fff;
+  --text-red: #ffffff;
   --bg-blue: #1e90ff; /* Saturated Blue */
-  --text-blue: #fff;
+  --text-blue: #ffffff;
   --bg-green: #32cd32; /* Saturated Green */
-  --text-green: #fff;
+  --text-green: #ffffff;
   --primary: #ff2a68;
   --secondary: #1e90ff;
   --transition-speed: 0.3s;
-  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 [data-theme="light"] {
@@ -41,11 +39,9 @@
   --text-color: var(--text-green);
 }
 
-/* General Styles */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color var(--transition-speed), color var(--transition-speed);
@@ -53,35 +49,29 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 
-/* Centered Content */
 .container {
   text-align: center;
-  max-width: 600px;
-  width: 100%;
 }
 
 .title {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-/* Button Styles */
 .button {
   width: 150px;
   height: 150px;
   background-color: var(--primary);
   border: none;
   border-radius: 50%;
-  box-shadow: 0 4px 12px var(--shadow);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   outline: none;
-  animation: pulse 1.5s infinite ease-in-out;
+  animation: pulse 1.5s infinite;
   transition: transform var(--transition-speed), background-color var(--transition-speed);
 }
 
@@ -94,18 +84,15 @@ body {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 
-/* Score, CPS, and Time Styling */
 .score, .cps, .play-time {
   font-size: 1.5rem;
-  margin-top: 1.5rem;
-  font-weight: 500;
+  margin-top: 1rem;
 }
 
-/* Hamburger Menu */
 .menu {
   position: absolute;
   top: 1rem;
@@ -123,7 +110,7 @@ body {
   width: 30px;
   height: 4px;
   background-color: var(--text-color);
-  transition: transform var(--transition-speed), opacity var(--transition-speed);
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
 }
 
 .menu.open div:nth-child(1) {
@@ -138,7 +125,6 @@ body {
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Settings Box */
 .settings-box {
   position: fixed;
   top: 0;
@@ -146,53 +132,41 @@ body {
   width: 250px;
   height: 100%;
   background-color: var(--bg-color);
-  box-shadow: 2px 0 10px var(--shadow);
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   transform: translateX(-100%);
   transition: transform var(--transition-speed);
-  overflow-y: auto;
 }
 
 .settings-box.open {
   transform: translateX(0);
 }
 
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  border: none;
+  color: var(--text-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--bg-color);
+}
+
 .theme-dropdown {
   margin-top: 20px;
-  padding: 0.75rem;
+  padding: 0.5rem;
   background-color: var(--bg-color);
   color: var(--text-color);
   border: 2px solid var(--text-color);
   border-radius: 5px;
-  font-size: 1.1rem;
-  font-weight: 400;
-  transition: all var(--transition-speed);
+  font-size: 1rem;
 }
 
-.theme-dropdown:focus {
-  outline: none;
-  border-color: var(--primary);
-}
-
-/* GitHub Link Styling */
-.github-link {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.github-link a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: color var(--transition-speed);
-}
-
-.github-link a:hover {
-  color: var(--primary);
-}
-
-/* Clock Display */
 .clock {
   position: absolute;
   top: 10px;
@@ -203,25 +177,12 @@ body {
   border: 2px solid var(--text-color);
   border-radius: 5px;
   font-size: 1rem;
-  box-shadow: 0 4px 10px var(--shadow);
 }
 
-/* Footer Styling */
 .footer {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--text-color);
-  font-weight: 300;
-}
-
-/* Hover Effects for Buttons and Links */
-button:hover {
-  background-color: var(--secondary);
-  color: var(--bg-color);
-}
-
-a:hover {
-  text-decoration: underline;
 }
