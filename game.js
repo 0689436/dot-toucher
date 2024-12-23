@@ -44,7 +44,6 @@ function updateClock() {
   const totalCommits = await getTotalCommits();
   if (totalCommits !== null) {
         function revision() {
-      var revcount = "1";
       document.getElementById("pubrevnum").innerHTML = number;
     }
 
