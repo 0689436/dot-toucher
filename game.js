@@ -63,4 +63,3 @@ function updatePlayTime() {
 setInterval(updateClock, 1000);
 setInterval(updatePlayTime, 1000);
 updateClock(); // Initial call to show the time immediately
-
