@@ -182,7 +182,7 @@ button:hover {
 .revnumc {
   position: absolute;
   bottom: 10px; 
-  font-size: 10px;
+  font-size: 4px;
   text-decoration: none;
   color: var(--text-color);
 }
