@@ -179,6 +179,14 @@ button:hover {
   font-size: 1rem;
 }
 
+.repo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
 .footer {
   position: absolute;
   bottom: 10px;
