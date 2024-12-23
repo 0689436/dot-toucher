@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dot Toucher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+  <div class="menu" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="settings-box" id="settings-box">
+    <h2>Settings</h2>
+    <select class="theme-dropdown" onchange="changeTheme(this.value)">
+      <option value="dark" selected>Dark</option>
+      <option value="light">Light</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+  </div>
+  <div class="container">
+    <h1 class="title">Dot Toucher</h1>
+    <button class="button" onclick="incrementScore()"></button>
+    <p class="score" id="score">Score: 0</p>
+    <p class="cps" id="cps">CPS: 0</p>
+    <p class="play-time" id="play-time">Play Time: 00:00:00</p>
+  </div>
+  
+  <div class="clock" id="clock"></div>
+
+  <div class="footer">
+    <p>Made by dorsalfinn79</p>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
 
