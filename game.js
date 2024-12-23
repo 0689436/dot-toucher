@@ -37,6 +37,14 @@ function updateClock() {
   clockElement.textContent = now.toLocaleTimeString();
 }
 
+
+    function revision() {
+      var number = "0";
+      document.getElementById("rev").innerHTML = number;
+    }
+
+
+
 function updatePlayTime() {
   playTime++;
   const playTimeDisplay = document.getElementById('play-time');
