@@ -50,7 +50,7 @@ function updateClock() {
 
 // Fetch and display total commits from GitHub API
 function fetchRevisions() {
-  const owner = "0689436";
+  const owner = "f-alling";
   const repo = "dot-toucher";
   const branch = "main"; // Replace with your branch name
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}&per_page=1`;
