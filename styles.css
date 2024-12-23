@@ -179,6 +179,14 @@ button:hover {
   font-size: 1rem;
 }
 
+.revnumc {
+  position: absolute;
+  bottom: 10px; 
+  font-size: 0.4rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+    
 .repo {
   position: absolute;
   bottom: 10px;
