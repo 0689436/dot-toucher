@@ -1,17 +1,17 @@
 // Replace these variables with your repo details
-const owner = "f-alling";
+const owner = "0689436";
 const repo = "dot-toucher";
 const branch = "main"; // Replace with your branch name
 
 // GitHub API URL to fetch commits
 const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?sha=${branch}&per_page=1`;
 
-async function getTotalCommits() {
+export async function getTotalCommits() {
   try {
     const response = await fetch(apiUrl, {
       headers: {
-        Accept: "application/vnd.github.v3+json"
-      }
+        Accept: "application/vnd.github.v3+json",
+      },
     });
 
     // Total commits are found in the `Link` header (if paginated)
@@ -32,7 +32,6 @@ async function getTotalCommits() {
     return totalCommits;
   } catch (error) {
     console.error("Error fetching total commits:", error);
+    return null;
   }
 }
-
-getTotalCommits();
