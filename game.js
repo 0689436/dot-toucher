@@ -44,13 +44,9 @@ function updateClock() {
 (async () => {
   const totalCommits = await getTotalCommits();
   if (totalCommits !== null) {
-      
       document.getElementById("pubrevnum").innerHTML = totalCommits;
-    }
-
-    // Use totalCommits in your code
   } else {
-    console.error("Failed to fetch the total commits.");
+    document.getElementById("pubrevnum").innerHTML = err;
   }
 })();
 
