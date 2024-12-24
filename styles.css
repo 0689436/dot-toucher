@@ -88,10 +88,20 @@ body {
   }
 }
 
-.score, .cps, .play-time {
+.score, .play-time {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
+
+.cps {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.high-cps {
+  color: var(--primary); /* Use primary color for CPS over 25 */
+}
+
 
 .menu {
   position: absolute;
@@ -123,6 +133,10 @@ body {
 
 .menu.open div:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
+}
+
+.high-cps {
+  color: var(--primary); /* Change the text color when CPS is over 25 */
 }
 
 .settings-box {
@@ -192,7 +206,12 @@ button:hover {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  color: var(--text-color);
+
+}
+
+.repo a {
   text-decoration: none;
   color: var(--text-color);
 }
@@ -201,6 +220,6 @@ button:hover {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--text-color);
 }
